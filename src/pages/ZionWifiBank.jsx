@@ -123,11 +123,11 @@ export default function ZionWifiBank() {
               { id: "bronze", name: "Bronze", price: 18, description: "3 Times Availability without Pdf" },
               { id: "silver", name: "Silver", price: 19, description: "3 Times Availability With Pdf" },
               { id: "gold", name: "Gold", price: 19, description: "3 Times Availability With Pdf" },
-              { id: "vip", name: "vip", price: 20, description: "1 Month, 2 devices Unlimited with Pdf" },
+              { id: "vip", name: "vip", price: 20, description: "3 Times Availability With Pdf" },
             ];
         setPackages(pkgs);
 
-        const avail = {};
+        const avail = {};n    
         for (let pkg of pkgs) {
           const snapCreds = await getDocs(
             query(collection(db, "credentials"), where("packageId", "==", pkg.id), where("used", "==", false))
